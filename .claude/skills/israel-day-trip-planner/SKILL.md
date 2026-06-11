@@ -38,7 +38,7 @@ Once the user confirms the destination, read `references/day-plan-format.md` for
 
 ### Step 5: Offer PDF export
 
-After presenting the full plan, read `references/pdf-export.md` to offer saving the plan as a PDF.
+After presenting the full plan, offer to save it as a PDF. If the user agrees, use the `pdf` skill to generate it.
 
 ## Tone
 
