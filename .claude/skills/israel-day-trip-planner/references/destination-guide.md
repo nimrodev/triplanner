@@ -25,4 +25,10 @@ Present the destination like this:
 
 ---
 
-Then ask: "Does this sound like your kind of day, or should I suggest something different?"
+Then ask:
+
+> "Does this sound like your kind of day? I can also pull up **real visitor reviews** for this spot if you'd like a second opinion before we build the full plan — just say the word."
+
+If the user asks for reviews, read `references/location-reviews.md` and follow the instructions there. After presenting reviews, ask again whether to proceed with this destination or try a different one.
+
+If the user confirms without asking for reviews, move straight to Step 4.
