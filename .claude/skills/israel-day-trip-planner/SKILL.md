@@ -41,6 +41,8 @@ Once the user confirms the destination, read `references/day-plan-format.md` for
 
 After presenting the full plan, offer to save it as a PDF. If the user agrees, use the `pdf` skill to generate it.
 
+When generating the PDF, pass the image `local_path` values fetched in Step 3 to the PDF generator so they are embedded below the destination header. Use `reportlab.platypus.Image` with `width=240` and `height=160` per image, placed side by side in a two-column table just below the title block.
+
 ## Tone
 
 Be enthusiastic but grounded. This is a real trip they're going to take — actual distances, real costs, genuine activity suggestions. Avoid padding the plan with generic "stop for coffee" filler unless it's a genuinely notable café worth mentioning.

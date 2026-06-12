@@ -8,6 +8,18 @@ Choose one destination that genuinely fits the user's hobbies. Use web search to
 
 Call `mcp__weather-israel__get_temperature` with the destination city/area and the trip date (YYYY-MM-DD format). Use the returned min/max temperatures to inform the description and tips.
 
+## Fetching images
+
+Run the image fetcher script to get 2 photos from Wikimedia Commons:
+
+```bash
+python3 <skill-base-dir>/scripts/fetch_images.py "<destination name>"
+```
+
+This returns JSON with `url` and `local_path` for each image. Keep the `local_path` values — they are needed later for PDF generation.
+
+If the script returns empty results (rare), skip images silently — don't mention it to the user.
+
 ## Presentation format
 
 Present the destination like this:
@@ -22,6 +34,9 @@ Present the destination like this:
 **About the place**: [Short description of what makes it special]
 
 🗺️ **Map**: https://www.google.com/maps/search/?api=1&query=[URL-encoded+destination+name+Israel]
+
+![destination photo 1]([url from first image result])
+![destination photo 2]([url from second image result])
 
 ---
 
