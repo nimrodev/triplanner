@@ -16,6 +16,7 @@ Ask the user — conversationally, not as a formal list:
 - Where are they starting from? (city or region)
 - When are they planning to go? (date — needed for weather)
 - Solo or with others?
+- Where are they visiting from / what's their home currency? (needed for cost conversion — skip if they mention a local Israeli city and seem to be a local)
 
 Keep it light. One or two questions at a time is fine.
 

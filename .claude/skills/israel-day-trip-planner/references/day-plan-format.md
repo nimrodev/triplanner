@@ -17,13 +17,22 @@ Use web search to verify opening hours, entry fees, and practical details before
 
 ## Budget breakdown
 
-| Item | Estimated Cost |
-|------|---------------|
-| Transport (round trip) | ₪XX |
-| Entry fees | ₪XX |
-| Food & drinks | ₪XX |
-| Activities / extras | ₪XX |
-| **Total** | **₪XXX** |
+After estimating the ILS costs for each item, run the cost calculator script to get live currency conversion and a formatted table:
+
+```bash
+python3 <skill-base-dir>/scripts/calculate_costs.py \
+  --currency <USER_CURRENCY_CODE> \
+  --items '[
+    {"item": "Transport (round trip)", "cost_ils": XX},
+    {"item": "Entry fees",             "cost_ils": XX},
+    {"item": "Food & drinks",          "cost_ils": XX},
+    {"item": "Activities / extras",    "cost_ils": XX}
+  ]'
+```
+
+Replace `<skill-base-dir>` with the base directory of this skill (shown at the top when the skill loads), and `<USER_CURRENCY_CODE>` with the user's currency (e.g. `USD`, `EUR`, `GBP`). If the user is local (ILS), pass `--currency ILS` and the table will show ILS only.
+
+Paste the script's markdown output directly into the chat. It includes the live exchange rate source line automatically.
 
 Keep the total under 1000 NIS. If entry to some sites is free, say so — it makes the budget feel more generous.
 
